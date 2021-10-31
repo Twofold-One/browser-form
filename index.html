@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/main.js" defer></script>
+    <script src="https://kit.fontawesome.com/ae38fdb830.js" crossorigin="anonymous"></script>
+    <link href="/style.css" rel="stylesheet">
+    <title>Browser form</title>
+</head>
+<body>
+    <div class="form-container">
+        <form novalidate>
+            <h1>Browser form</h1>
+            <div class="form-field">
+                <i class="fas fa-at"></i>
+                <label for="mail">
+                    <span>Please enter an email address:</span>
+                    <input type="email" id="email" name="email" minlength="8" placeholder="you@yourmail.abc" required>
+                    <span class="error" aria-live="polite"></span>
+                </label>
+            </div>
+    
+            <div class="form-field">
+                <i class="far fa-flag"></i>
+                <label for="country">
+                    <span>Please enter your country:</span>
+                    <input type="text" id="country" name="country" minlength="5" pattern="[A-Za-z]{5,}" placeholder="Your coutry" required>
+                    <span class="error" aria-live="polite"></span>
+                </label>
+            </div>
+    
+            <div class="form-field">
+                <i class="far fa-address-book"></i>
+                <label for="zip-code">
+                    <span>Please enter your ZIP code: </span>
+                    <input type="text" id="zip-code" name="zip-code" minlength="5" maxlength="9" pattern="[0-9]{5,9}" placeholder="xxxxx or xxxxx-xxxx (without hyphen)" required>
+                    <span class="error" aria-live="polite"></span>
+                </label>
+            </div>
+    
+            <div class="form-field">
+                <i class="fas fa-lock"></i>
+                <label for="password">
+                    <span>Please enter your password:</span>
+                    <input type="password" id="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Password here" required>
+                    <span class="error" aria-live="polite"></span>
+                </label>
+            </div>
+    
+            <div class="form-field">
+                <i class="fas fa-lock"></i>
+                <label for="password-confirm">
+                    <span>Please confirm your password:</span>
+                    <input type="password" id="password-confirm" name="password-confirm" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Password confirmation here" required>
+                    <span class="error" aria-live="polite"></span>
+                </label>
+            </div>
+    
+            <div class="form-field">
+                <label for="submit">
+                    <button type="submit" id="submit" name="submit">Submit</button>
+                </label>
+            </div>
+        </form>
+    </div> 
+</body>
+</html>
